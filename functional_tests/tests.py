@@ -42,8 +42,8 @@ class NewVisitorTest(LiveServerTestCase):
 		# and now the page lists "1: Buy peacock feathers" as an item in a
 		# TO-DO list table
 		inputbox.send_keys(Keys.ENTER)
-		edit_list_url = self.browser.current_url
-		self.assertRegex(edit_list_url, r`'/lists.+')
+		edith_list_url = self.browser.current_url
+		self.assertRegex(edith_list_url, r'/lists/.+')
 		self.check_for_row_in_list_table('1: Buy peacock feathers')
 
 		#There is still a text box inviting her to add another item.  She
